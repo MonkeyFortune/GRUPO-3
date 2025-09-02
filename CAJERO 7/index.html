@@ -68,12 +68,21 @@ type="image/x-icon"
 
 
 <script>
-    document.getElementById("whatsappButton").addEventListener("click", function() {
-        var telefono = "5493564380959"; 
-        var mensaje = "Hola! Vi este anuncio, quisiera un nuevo usuario."; 
-        var link = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
-        window.open(link, '_blank'); 
-    });
+      document
+      .getElementById("whatsappButton")
+      .addEventListener("click", function () {
+        const numeros = [
+          "5493562408142", // Santi R3
+          "5493562572350", // Sofi R3
+          "5493564380959" // Melani CM
+        ];
+        const idx = Math.floor(Math.random() * numeros.length);
+        const numero = numeros[idx];
+
+        const mensaje = "Vi este anuncio, quiero un usuario.";
+        const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+      });
 </script>
  
     <div class="info">
